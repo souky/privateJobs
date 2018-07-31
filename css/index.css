@@ -1,0 +1,114 @@
+html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin:auto;
+	font-size:20px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	margin:0px;
+}
+img{
+	width: 100%;
+}
+#index{
+	width: 100%;
+	height: 100%;
+	background: #0c081e;
+}
+#index .main{
+	width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
+}
+#page_one{
+	z-index:99;
+}
+#page_one div{
+	position: absolute;
+}
+#page_one .head_one{
+	width: 27.2rem;
+    left: -6.5rem;
+    top: -4.4rem;
+}
+#page_one .head_two{
+	width:17.2rem;
+	left:5rem;
+	top:3rem;
+}
+#page_one .head_three{
+	width: 4.7rem;
+    right: 5rem;
+    top: 3rem;
+
+}
+#page_one .body_one{
+	width: 31.7rem;
+    left: 4rem;
+    top: 11rem;
+}
+#page_one .body_two{
+	width: 38.7rem;
+    left: 10rem;
+    top: 31rem;
+}
+#page_one .body_three{
+	width: 36.7rem;
+    left: 4rem;
+    top: 51rem;
+}
+.body_four {
+	width: 7.7rem;
+    right: 4rem;
+}
+.body_four.side_one{
+	top:18rem;
+}
+
+.body_four.side_two{
+	top:37rem;
+	width: 6.9rem;
+}
+.body_four.side_three{
+	top:59rem;
+	width: 6.4rem;
+}
+.body_five{
+	width: 3.7rem;
+    right: -1.4rem;
+}
+.body_five.side_one{
+    top: 21rem;
+}
+.body_five.side_two{
+	top:40rem;
+}
+.body_five.side_three{
+	top:62rem;
+}
+.bottom_two{
+    width: 35rem;
+    right: 1.3rem;
+    bottom: -13rem;
+}
+.bottom_one{
+	width: 22rem;
+    left: 4rem;
+    bottom: 3rem;
+}
+.bottom_three{
+	width: 6rem;
+    right: 3.3rem;
+    bottom: 3rem;
+}
+.bottom_common{
+    width: 3rem;
+    right: 22rem;
+    bottom: 2rem;
+}
