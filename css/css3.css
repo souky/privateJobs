@@ -58,3 +58,13 @@ to {opacity: 1;transform: translate(0,0);}
   from {opacity:0;-webkit-transform: translate(30rem,0);}
   to {opacity: 1;-webkit-transform: translate(0,0);}
 }
+@keyframes flowRight40
+{
+from {opacity:0;transform: translate(40rem,0);}
+to {opacity: 1;transform: translate(0,0);}
+}
+@-webkit-keyframes flowRight40
+{
+  from {opacity:0;-webkit-transform: translate(40rem,0);}
+  to {opacity: 1;-webkit-transform: translate(0,0);}
+}
