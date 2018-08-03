@@ -1,122 +1,247 @@
-html{
+html {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	margin:auto;
-	font-size:20px;
+	margin: auto;
+	font-size: 20px;
 }
-body{
+
+body {
 	width: 100%;
 	height: 100%;
-	margin:0px;
+	margin: 0px;
 }
-img{
+
+img {
 	width: 100%;
 }
-.animateFadeIn{
-	animation:fadeInOut 1s linear alternate infinite;
-	-webkit-animation:fadeInOut 1s linear alternate infinite;
+
+.animateFadeIn {
+	animation: fadeInOut 1s linear alternate infinite;
+	-webkit-animation: fadeInOut 1s linear alternate infinite;
 }
-.animateTop{
-	animation:animateTop 1s linear alternate infinite;
-	-webkit-animation:animateTop 1s linear alternate infinite;
+
+.animateTop {
+	animation: animateTop 1s linear alternate infinite;
+	-webkit-animation: animateTop 1s linear alternate infinite;
 }
-#index{
+
+.bottom_common {
+	width: 3rem;
+	right: 22rem;
+	bottom: 2rem;
+	position: absolute;
+}
+
+.animate {
+	opacity: 0;
+}
+
+#index {
 	width: 100%;
 	height: 100%;
 	background: #0c081e;
 }
-#index .main{
+
+#index .main {
 	width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    position: absolute;
-    overflow: hidden;
+	height: 100%;
+	left: 0;
+	right: 0;
+	position: absolute;
+	overflow: hidden;
 }
-#page_one{
-	z-index:99;
-}
-#page_one div{
+
+#index .main div {
 	position: absolute;
 }
-#page_one .head_one{
-	width: 27.2rem;
-  left: -6.5rem;
-  top: -4.4rem;
-}
-#page_one .head_two{
-	width:17.2rem;
-	left:5rem;
-	top:3rem;
-}
-#page_one .head_three{
-	width: 4.7rem;
-  right: 5rem;
-  top: 3rem;
 
+#page_one {
+	z-index: 99;
 }
-#page_one .body_one{
+
+#page_one .head_one {
+	width: 27.2rem;
+	left: -6.5rem;
+	top: -4.4rem;
+}
+
+#page_one .head_two {
+	width: 17.2rem;
+	left: 5rem;
+	top: 3rem;
+}
+
+#page_one .head_three {
+	width: 4.7rem;
+	right: 5rem;
+	top: 3rem;
+}
+
+#page_one .body_one {
 	width: 31.7rem;
-  left: 4rem;
-  top: 11rem;
+	left: 4rem;
+	top: 11rem;
 }
-#page_one .body_two{
+
+#page_one .body_two {
 	width: 38.7rem;
-  left: 10rem;
-  top: 31rem;
+	left: 10rem;
+	top: 31rem;
 }
-#page_one .body_three{
+
+#page_one .body_three {
 	width: 36.7rem;
-  left: 4rem;
-  top: 51rem;
+	left: 4rem;
+	top: 51rem;
 }
+
 #page_one .body_four {
 	width: 7.7rem;
-    right: 4rem;
-}
-#page_one .body_four.side_one{
-	top:18rem;
+	right: 4rem;
 }
 
-#page_one .body_four.side_two{
-	top:37rem;
+#page_one .body_four.side_one {
+	top: 18rem;
+}
+
+#page_one .body_four.side_two {
+	top: 37rem;
 	width: 6.9rem;
 }
-#page_one .body_four.side_three{
-	top:59rem;
+
+#page_one .body_four.side_three {
+	top: 59rem;
 	width: 6.4rem;
 }
-#page_one .body_five{
+
+#page_one .body_five {
 	width: 3.7rem;
-    right: -1.4rem;
+	right: -1.4rem;
 }
-#page_one .body_five.side_one{
-    top: 21rem;
+
+#page_one .body_five.side_one {
+	top: 21rem;
 }
-#page_one .body_five.side_two{
-	top:40rem;
+
+#page_one .body_five.side_two {
+	top: 40rem;
 }
-#page_one .body_five.side_three{
-	top:62rem;
+
+#page_one .body_five.side_three {
+	top: 62rem;
 }
-#page_one .bottom_two{
-    width: 35rem;
-    right: 1.3rem;
-    bottom: -13rem;
+
+#page_one .bottom_two {
+	width: 35rem;
+	right: 1.3rem;
+	bottom: -13rem;
 }
-#page_one .bottom_one{
+
+#page_one .bottom_one {
 	width: 22rem;
-    left: 4rem;
-    bottom: 3rem;
+	left: 4rem;
+	bottom: 3rem;
 }
-#page_one .bottom_three{
+
+#page_one .bottom_three {
 	width: 6rem;
-    right: 3.3rem;
-    bottom: 3rem;
+	right: 3.3rem;
+	bottom: 3rem;
 }
-#page_one .bottom_common{
-    width: 3rem;
-    right: 22rem;
+
+#page_two {
+	z-index: 99;
+}
+
+#page_two .head_one {
+	width: 21.2rem;
+	left: -1rem;
+	top: 3rem;
+}
+
+#page_two .head_two {
+	width: 4.7rem;
+	right: 5rem;
+	top: 3rem;
+}
+.body_one{
+	width: 3.5rem;
+    left: 5rem;
+}
+.body_one.side_one{
+	top: 18rem;
+}
+.body_one.side_two{
+	top: 28rem;
+}
+.body_one.side_three{
+	top: 38rem;
+}
+.body_two{
+	width: 5.5rem;
+    left: 5.6rem;
+}
+.body_two.side_one{
+	top: 20.8rem;
+}
+.body_two.side_two{
+	top: 30.8rem;
+}
+.body_two.side_three{
+	top: 40.8rem;
+}
+.body_three{
+    width: 15.5rem;
+    left: 10.6rem;
+}
+.body_three.side_one{
+	top: 15.2rem;
+}
+.body_three.side_two{
+	top: 25.2rem;
+    width: 23rem;
+    left: 11rem;
+}
+.body_three.side_three{
+	top: 35.2rem;
+    width: 23rem;
+    left:10.8rem;
+}
+.body_four{
+	top: 48.2rem;
+    width: 18rem;
+    left: 5.1rem;
+}
+
+.body_five{
+    top: 55.2rem;
+    width: 28rem;
+    left: 5.1rem;
+}
+.body_five.part_two{
+    top: 54.2rem;
+    width: 5rem;
+    left: 19.2rem;
+}
+.body_six{
+	top: 62.2rem;
+    width: 40rem;
+    left: 5.1rem;
+}
+
+#page_two .bottom_one {
+	width: 22rem;
+	left: 4rem;
+	bottom: 3rem;
+}
+.bottom_two{
+	width: 5rem;
+    right: 9rem;
+    bottom: -2rem;
+}
+.bottom_three{
+	width: 11rem;
+    right: 1rem;
     bottom: 2rem;
 }
