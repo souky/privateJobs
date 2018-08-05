@@ -309,3 +309,72 @@ img {
     right: 1rem;
     bottom: 2rem;
 }
+
+#page_four {
+	z-index: 1;
+}
+
+#page_four .head_one {
+	width: 21.2rem;
+	left: -1rem;
+	top: 3rem;
+}
+
+#page_four .head_two {
+	width: 4.7rem;
+	right: 5rem;
+	top: 3rem;
+}
+#page_four .slides{
+	width: 100%;
+    height: 58rem;
+    left: 0;
+    top: 14rem;
+}
+#page_four .slides .context{
+	height:54rem;
+	position: relative!important;
+}
+#page_four .slides .imgs{
+	float: left;
+	width: 49rem;
+    height: 54rem;
+    position: relative!important;
+}
+#page_four .slides img{
+	width: 100%;
+    height: 54rem;
+}
+#page_four .slides .point{
+	position: relative!important;
+	margin: 1rem auto;
+	height: 2rem;
+}
+#page_four .slides .point .point_{
+	position: relative!important;
+	width: 1rem;
+	height:1rem;
+	margin:0.5rem 0.5rem;
+	border-radius: 50%;
+	background: #757575;
+	float: left;
+}
+#page_four .slides .point .point_.active{
+	background: #fff;
+}
+
+#page_four .body_two{
+	width: 14rem;
+    left: 18rem;
+    bottom: 12rem;
+}
+#page_four .bottom_one {
+	width: 22rem;
+	left: 4rem;
+	bottom: 3rem;
+}
+#page_four .bottom_two{
+	width: 5rem;
+    right: 9rem;
+    bottom: -2rem;
+}
