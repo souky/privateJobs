@@ -1,6 +1,3 @@
-//     Zepto.js
-//     (c) 2010-2017 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
 
 var Zepto = (function() {
   var undefined, key, $, classList, emptyArray = [], concat = emptyArray.concat, filter = emptyArray.filter, slice = emptyArray.slice,
@@ -480,7 +477,7 @@ var Zepto = (function() {
       return $(uniq(this.concat($(selector,context))))
     },
     is: function(selector){
-      return typeof selector == 'string' ? this.length > 0 && zepto.matches(this[0], selector) : 
+      return typeof selector == 'string' ? this.length > 0 && zepto.matches(this[0], selector) :
           selector && this.selector == selector.selector
     },
     not: function(selector){

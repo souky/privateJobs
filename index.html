@@ -7,8 +7,19 @@
 		<link rel="shortcut icon" href="//oss3.rabbitpre.com/rp/renderer/favicon.ico">
 		<title>JQK</title>
 	</head>
+	<script type="text/javascript" src="js/main.min.js" ></script>
+	<script type="text/javascript" src="js/event.min.js" ></script>
+	<script type="text/javascript" src="js/selector.min.js" ></script>
+	<script type="text/javascript" src="js/touch.min.js" ></script>
+	<script type="text/javascript" src="js/fx.min.js" ></script>
+	<script type="text/javascript" src="js/index.js" ></script>
 	<body>
 		<div id="index">
+			<div id="loading_">
+				<div class="loadings">
+					<div class="prossess"></div>
+				</div>
+			</div>
 			<div id="page_one" class="main" data-order="1">
 				<div class="head_one animate" data-animate="fadeInOut"  data-secDe="2">
 					<img src="img/98908cab-4ae1-4478-9437-34be44f65b1b.png">
@@ -52,12 +63,12 @@
 				<div class="bottom_two animate" data-animate="fadeInOut"  data-secDe="2">
 					<img src="img/1b30e104-20d6-4849-ae3f-1359664a703e.png">
 				</div>
-				<div class="bottom_three animate" data-animate="fadeInOut"  data-infinty="1">
+				<div class="bottom_three animate" data-animate="fadeInOut" onclick="nextPage(this)"  data-infinty="1">
 					<img src="img/65f82d0a-4ab9-4328-a60c-9c6d39817bb1.png">
 				</div>
 
 			</div>
-			
+
 			<div id="page_two" class="main" data-order="2">
 				<div class="head_one animate" data-animate="flowLeft20" >
 					<img src="img/f1096cca-c064-45da-a373-ebf41f6110be.png">
@@ -65,7 +76,7 @@
 				<div class="head_two animate" data-animate="flowRight20" >
 					<img src="img/c31a89d5-5bcd-41d4-aa35-f42b020140a2.png">
 				</div>
-				
+
 				<div class="body_one side_one animate" data-animate="flowLeft10" >
 					<img src="img/9445fc68-37c9-4b2e-8a26-a9eff9e14bbd.png">
 				</div>
@@ -75,7 +86,7 @@
 				<div class="body_three side_one animate" data-animate="narrow2" data-secDe="1">
 					<img src="img/ade3a038-9a0c-41f8-9c90-edcaf2e6b3b5.png">
 				</div>
-				
+
 				<div class="body_one side_two animate" data-animate="flowLeft10" data-secDe="2">
 					<img src="img/9445fc68-37c9-4b2e-8a26-a9eff9e14bbd.png">
 				</div>
@@ -85,7 +96,7 @@
 				<div class="body_three side_two animate" data-animate="narrow2" data-secDe="3">
 					<img src="img/40db9ef1-dec5-4b58-8b14-52a0eace6bb1.png">
 				</div>
-				
+
 				<div class="body_one side_three animate" data-animate="flowLeft10" data-secDe="4">
 					<img src="img/9445fc68-37c9-4b2e-8a26-a9eff9e14bbd.png">
 				</div>
@@ -95,44 +106,44 @@
 				<div class="body_three side_three animate" data-animate="narrow2" data-secDe="5">
 					<img src="img/8b288c2a-935a-4743-8ad8-58e2e4c1b21b.png">
 				</div>
-				
+
 				<div class="body_four animate" data-animate="flowTop20" data-secDe="6.5">
 					<img src="img/c4ad591f-df97-4649-8366-9796b32b3025.png">
 				</div>
-				
+
 				<div class="body_five animate" data-animate="flowTop20" data-secDe="8">
 					<img src="img/429f9a50-6d96-4886-a3a3-7dff14a4133d.png">
 				</div>
 				<div class="body_five part_two animate" data-animate="flowTop20" data-secDe="8">
 					<img src="img/481f9707-cfc1-43a4-892b-e0d14821c2f9.png">
 				</div>
-				
+
 				<div class="body_six animate" data-animate="flowTop20" data-secDe="9.5">
 					<img src="img/6e26c41a-ec42-4e9c-98d7-d7d377788e45.png">
 				</div>
-				
+
 				<div class="bottom_one animate" data-animate="flowLeft20" >
 					<img src="img/93a566d8-3c6f-4533-8aa3-3a905bcd0317.png">
 				</div>
-				
+
 				<div class="bottom_two animate" data-animate="flowRight20" >
 					<img src="img/bb2240c2-65b4-4bd2-a405-5061b205619c.png">
 				</div>
-				
-				<div class="bottom_three animate" data-animate="fadeInOut"  data-infinty="1">
+
+				<div class="bottom_three animate" data-animate="fadeInOut" onclick="nextPage(this)" data-infinty="1">
 					<img src="img/next.png">
 				</div>
 			</div>
-			
+
 			<div id="page_three" class="main" data-order="3">
-				
+
 				<div class="head_one animate" data-animate="flowLeft20" >
 					<img src="img/21a3954a-f22d-47c6-9e39-c9740222f066.png">
 				</div>
 				<div class="head_two animate" data-animate="flowRight20" >
 					<img src="img/27cbbb8d-4572-4c79-a5a4-88229be04bab.png">
 				</div>
-				
+
 				<div class="body_one animate" data-animate="flowTop20" data-secDe="1">
 					<img src="img/c118b1a7-9db4-492c-8e3a-41f8e3e43cc4.png">
 				</div>
@@ -154,20 +165,20 @@
 				<div class="body_three side_five animate" data-animate="flowTop20" data-secDe="6">
 					<img src="img/1f708daa-f0c6-40bb-99a6-ea424aa252b0.png">
 				</div>
-				
+
 				<div class="bottom_one animate" data-animate="flowLeft20" >
 					<img src="img/93a566d8-3c6f-4533-8aa3-3a905bcd0317.png">
 				</div>
-				
+
 				<div class="bottom_two animate" data-animate="flowRight20" >
 					<img src="img/bb2240c2-65b4-4bd2-a405-5061b205619c.png">
 				</div>
-				
-				<div class="bottom_three animate" data-animate="fadeInOut"  data-infinty="1">
+
+				<div class="bottom_three animate" data-animate="fadeInOut" onclick="nextPage(this)" data-infinty="1">
 					<img src="img/next.png">
 				</div>
 			</div>
-			
+
 			<div id="page_four" data-slide="1" class="main" data-order="4">
 				<div class="head_one animate" data-animate="flowLeft20" >
 					<img src="img/155f6ad5-c63e-4839-813a-b429ff40e203.png">
@@ -175,7 +186,7 @@
 				<div class="head_two animate" data-animate="flowTop20" >
 					<img src="img/a8d0dc92-dfc2-4b68-916a-5845053b5720.png">
 				</div>
-				
+
 				<div class="slides">
 					<div class="context">
 						<div class="imgs">
@@ -194,7 +205,7 @@
 						<div class="point_"></div>
 					</div>
 				</div>
-				
+
 				<div class="body_two animate" data-animate="flowTop20" >
 					<img src="img/4220d653-f21f-4a51-b26a-bcd97479df9b.png">
 				</div>
@@ -205,16 +216,16 @@
 					<img src="img/bb2240c2-65b4-4bd2-a405-5061b205619c.png">
 				</div>
 			</div>
-			
+
 			<div class="bottom_common animateTop">
 				<img src="img/switch-guide.95ef4d6257.png">
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript" src="js/main.js" ></script>
-	<script type="text/javascript" src="js/event.js" ></script>
-	<script type="text/javascript" src="js/selector.js" ></script>
-	<script type="text/javascript" src="js/touch.js" ></script>
-	<script type="text/javascript" src="js/fx.js" ></script>
-	<script type="text/javascript" src="js/index.js" ></script>
+	
+	<script>
+	document.body.addEventListener('touchmove', function (e) {
+  		e.preventDefault(); 
+	}, {passive: false}); 
+	</script>
 </html>

@@ -1,6 +1,3 @@
-//     Zepto.js
-//     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
 
 ;(function($){
   var zepto = $.zepto, oldQsa = zepto.qsa, oldMatches = zepto.matches
@@ -10,17 +7,6 @@
     return !!(elem.width() || elem.height()) && elem.css("display") !== "none"
   }
 
-  // Implements a subset from:
-  // http://api.jquery.com/category/selectors/jquery-selector-extensions/
-  //
-  // Each filter function receives the current index, all nodes in the
-  // considered set, and a value if there were parentheses. The value
-  // of `this` is the node currently being considered. The function returns the
-  // resulting node(s), null, or undefined.
-  //
-  // Complex selectors are not supported:
-  //   li:has(label:contains("foo")) + li:has(label:contains("bar"))
-  //   ul.inner:first > li
   var filters = $.expr[':'] = {
     visible:  function(){ if (visible(this)) return this },
     hidden:   function(){ if (!visible(this)) return this },
@@ -39,7 +25,6 @@
       classTag = 'Zepto' + (+new Date())
 
   function process(sel, fn) {
-    // quote the hash in `a[href^=#]` expression
     sel = sel.replace(/=#\]/g, '="#"]')
     var filter, arg, match = filterRe.exec(sel)
     if (match && match[2] in filters) {
@@ -60,8 +45,6 @@
         var taggedParent
         if (!sel && filter) sel = '*'
         else if (childRe.test(sel))
-          // support "> *" child queries by tagging the parent node with a
-          // unique class and prepending that classname onto the selector
           taggedParent = $(node).addClass(classTag), sel = '.'+classTag+' '+sel
 
         var nodes = oldQsa(node, sel)

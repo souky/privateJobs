@@ -1,7 +1,3 @@
-//     Zepto.js
-//     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
-
 ;(function($){
   var touch = {},
     touchTimeout, tapTimeout, swipeTimeout, longTapTimeout,
@@ -49,7 +45,6 @@
       e.type.toLowerCase() == 'mspointer'+type)
   }
 
-  // helper function for tests, so they check for different APIs
   function unregisterTouchEvents(){
     if (!initialized) return
     $(document).off(eventMap.down, down)
@@ -77,7 +72,6 @@
       { 'down': 'MSPointerDown', 'up': 'MSPointerUp',
         'move': 'MSPointerMove', 'cancel': 'MSPointerCancel' } : false)
 
-    // No API availables for touch events
     if (!eventMap) return
 
     if ('MSGesture' in window) {
@@ -100,8 +94,6 @@
         !isPrimaryTouch(e)) return
       firstTouch = _isPointerType ? e : e.touches[0]
       if (e.touches && e.touches.length === 1 && touch.x2) {
-        // Clear out touch movement data if we have it sticking around
-        // This can occur if touchcancel doesn't fire due to preventDefault, etc.
         touch.x2 = undefined
         touch.y2 = undefined
       }
@@ -115,7 +107,6 @@
       if (delta > 0 && delta <= 250) touch.isDoubleTap = true
       touch.last = now
       longTapTimeout = setTimeout(longTap, longTapDelay)
-      // adds the current touch contact for IE gesture recognition
       if (gesture && _isPointerType) gesture.addPointer(e.pointerId)
     }
 
@@ -136,7 +127,6 @@
         !isPrimaryTouch(e)) return
       cancelLongTap()
 
-      // swipe
       if ((touch.x2 && Math.abs(touch.x1 - touch.x2) > 30) ||
           (touch.y2 && Math.abs(touch.y1 - touch.y2) > 30))
 
@@ -148,29 +138,19 @@
           touch = {}
         }, 0)
 
-      // normal tap
       else if ('last' in touch)
-        // don't fire tap when delta position changed by more than 30 pixels,
-        // for instance when moving to a point and back to origin
         if (deltaX < 30 && deltaY < 30) {
-          // delay by one tick so we can cancel the 'tap' event if 'scroll' fires
-          // ('tap' fires before 'scroll')
           tapTimeout = setTimeout(function() {
 
-            // trigger universal 'tap' with the option to cancelTouch()
-            // (cancelTouch cancels processing of single vs double taps for faster 'tap' response)
             var event = $.Event('tap')
             event.cancelTouch = cancelAll
-            // [by paper] fix -> "TypeError: 'undefined' is not an object (evaluating 'touch.el.trigger'), when double tap
             if (touch.el) touch.el.trigger(event)
 
-            // trigger double tap immediately
             if (touch.isDoubleTap) {
               if (touch.el) touch.el.trigger('doubleTap')
               touch = {}
             }
 
-            // trigger single tap after 250ms of inactivity
             else {
               touchTimeout = setTimeout(function(){
                 touchTimeout = null
@@ -189,13 +169,8 @@
       .on(eventMap.down, down)
       .on(eventMap.move, move)
 
-    // when the browser window loses focus,
-    // for example when a modal dialog is shown,
-    // cancel all ongoing events
     $(document).on(eventMap.cancel, cancelAll)
 
-    // scrolling the window indicates intention of the user
-    // to scroll, not tap or swipe, so cancel all ongoing events
     $(window).on('scroll', cancelAll)
 
     initialized = true
